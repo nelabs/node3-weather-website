@@ -8,7 +8,7 @@ const forecast = (lat, lon, callback) => {
         } else if (body.main.length === 0) {
             callback('Unable fetch data', undefined)
         } else {
-            callback(undefined, 'Curent temperature is ' + body.main.temp + ' degrees. Feels like ' + body.main.feels_like + ' C');
+            callback(undefined, 'Curent temperature is ' + body.main.temp + ' degrees. Feels like ' + body.main.feels_like + ' C. Max temperature today is '+ body.main.temp_max);
         }
     });
 
